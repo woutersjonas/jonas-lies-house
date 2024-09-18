@@ -1,0 +1,9 @@
+@if(imageService.images) {
+    <div class="slider">
+        <button class="slider-navigation next" (click)="imageService.nextImage()"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="slider-navigation prev" (click)="imageService.prevImage()"><i class="fa-solid fa-arrow-left"></i></button>
+        @for(image of imageService.images; track $index) {
+            <div class="slide" [ngClass]="{'show': $index === imageService.currentImage}"><img [src]="image.link" [alt]="image.shortDescription"/></div>
+        }
+    </div>
+}

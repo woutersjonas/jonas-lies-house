@@ -1,0 +1,32 @@
+.slider{
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    .slider-navigation{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        &.prev{
+            left: 0;
+        }
+        &.next{
+            right: 0;
+        }
+        width: 80px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: none;
+        outline: none;
+        font-size: 50px;
+    }
+    .slide{
+        display: none;
+        &.show{
+            display: block;
+        }
+        img {
+            width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    }
+}
