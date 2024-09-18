@@ -3,10 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieComponent } from './components/movie/movie.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { RenovationsComponent } from './components/renovations/renovations.component';
-import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent, pathMatch: 'full'},
+  {path: "", pathMatch: 'full', redirectTo: 'slider'},
   {path: "movie", component: MovieComponent},
   {path: "slider", component: SliderComponent},
   {path: "renovations", component: RenovationsComponent},
