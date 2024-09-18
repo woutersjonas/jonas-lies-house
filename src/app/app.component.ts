@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { ImageService } from './services/image.service';
 import { RoutingService } from './services/routing.service';
 
@@ -8,29 +7,16 @@ import { RoutingService } from './services/routing.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   isOnSliderRouting: boolean = false;
   constructor(
     private readonly imageService: ImageService,
-    private readonly router: Router
+    private readonly routingService: RoutingService
   ) {}
-
-  ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        // Check if the route is "slider"
-        if (this.router.url === '/slider') {
-          this.isOnSliderRouting = true;
-        } else {
-          this.isOnSliderRouting = false;
-        }
-      }
-    });
-  }
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
-    if(this.isOnSliderRouting) {
+    if(this.routingService.routing === "slider") {
       if(event.key === "ArrowRight") { this.imageService.nextImage() }
       if(event.key === "ArrowLeft") { this.imageService.prevImage() }
     }
