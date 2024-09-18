@@ -11,6 +11,7 @@ import { RenovationComponent } from './components/renovations/renovation/renovat
 import { RenovationsComponent } from './components/renovations/renovations.component';
 import { WIPComponent } from './components/wip/wip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RenovationsComponent,
     WIPComponent,
     NavbarComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

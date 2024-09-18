@@ -1,7 +1,5 @@
 <div class="container-lg p-4">
-    <h1 class="text-center">{{ standardValueService.title }}</h1>
+    <app-title/>
     <app-navbar/>
-    @if (routingService.routing === 'slider') {<app-slider/>}
-    @if (routingService.routing === 'movie') {<app-movie/>}
-    @if (routingService.routing === 'renovations') {<app-renovations/>}
+    <app-home/>
 </div>
