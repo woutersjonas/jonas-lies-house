@@ -5,7 +5,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { RenovationsComponent } from './components/renovations/renovations.component';
 
 const routes: Routes = [
-  {path: "", pathMatch: 'full', redirectTo: 'slider'},
+  {path: "", component: SliderComponent},
   {path: "movie", component: MovieComponent},
   {path: "slider", component: SliderComponent},
   {path: "renovations", component: RenovationsComponent},
