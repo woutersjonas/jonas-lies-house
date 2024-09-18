@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoutingService } from '../../services/routing.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  constructor(public readonly routingService: RoutingService){}
 }

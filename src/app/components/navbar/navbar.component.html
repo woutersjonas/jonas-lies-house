@@ -1,10 +1,10 @@
 <div class="d-sm-none mb-4">
-    <button class="w-100 btn btn-outline-primary d-block mb-2" routerLinkActive="btn-primary text-light" [routerLink]="['/movie']">Watch movie</button>
-    <button class="w-100 btn btn-outline-primary d-block mb-2" routerLinkActive="btn-primary text-light" [routerLink]="['/slider']">Watch fotos</button>
-    <button class="w-100 btn btn-outline-primary d-block mb-2" routerLinkActive="btn-primary text-light" [routerLink]="['/renovations']">Renovations</button>
+    <button class="w-100 btn btn-outline-primary d-block mb-2" (click)="routingService.setRouting('movie')" [ngClass]="{'btn-primary text-light': routingService.routing === 'movie' }">Watch movie</button>
+    <button class="w-100 btn btn-outline-primary d-block mb-2" (click)="routingService.setRouting('slider')" [ngClass]="{'btn-primary text-light': routingService.routing === 'slider' }">Watch fotos</button>
+    <button class="w-100 btn btn-outline-primary d-block mb-2" (click)="routingService.setRouting('renovations')" [ngClass]="{'btn-primary text-light': routingService.routing === 'renovations' }">Renovations</button>
 </div>
 <div class="row d-none d-sm-flex mb-4">
-    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" routerLinkActive="btn-primary text-light" [routerLink]="['/movie']">Watch movie</button></div>    
-    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" routerLinkActive="btn-primary text-light" [routerLink]="['/slider']">Watch fotos</button></div> 
-    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" routerLinkActive="btn-primary text-light" [routerLink]="['/renovations']">Renovations</button></div> 
+    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" (click)="routingService.setRouting('movie')" [ngClass]="{'btn-primary text-light': routingService.routing === 'movie' }">Watch movie</button></div>    
+    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" (click)="routingService.setRouting('slider')" [ngClass]="{'btn-primary text-light': routingService.routing === 'slider' }">Watch fotos</button></div> 
+    <div class="col-12 col-sm-4"><button class="w-100 btn btn-outline-primary" (click)="routingService.setRouting('renovations')" [ngClass]="{'btn-primary text-light': routingService.routing === 'renovations' }">Renovations</button></div> 
 </div>
