@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RenovationComponent } from './components/renovations/renovation/renovation.component';
 import { RenovationsComponent } from './components/renovations/renovations.component';
 import { WIPComponent } from './components/wip/wip.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WIPComponent } from './components/wip/wip.component';
     RenovationComponent,
     RenovationsComponent,
     WIPComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
