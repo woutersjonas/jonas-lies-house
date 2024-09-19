@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jonas-and-lies-huisje": {
+    "lies-and-jonas-huisje": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/jonas-and-lies-huisje",
+            "outputPath": "dist/lies-and-jonas-huisje",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "jonas-and-lies-huisje:build:production"
+              "buildTarget": "lies-and-jonas-huisje:build:production"
             },
             "development": {
-              "buildTarget": "jonas-and-lies-huisje:build:development"
+              "buildTarget": "lies-and-jonas-huisje:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "jonas-and-lies-huisje:build"
+            "buildTarget": "lies-and-jonas-huisje:build"
           }
         },
         "test": {

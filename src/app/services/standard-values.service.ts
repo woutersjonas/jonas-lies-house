@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StandardValuesService {
-  title = 'Jonas & Lies | Huisje';
+  title = 'Lies & Jonas | Huisje';
   constructor() { }
 }
