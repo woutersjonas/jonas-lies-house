@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-renovation',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './renovation.component.scss'
 })
 export class RenovationComponent {
-
+  @Input() renovationDocument: string = "";
 }

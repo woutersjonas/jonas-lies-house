@@ -1,1 +1,6 @@
-<p>renovation works!</p>
+@if (renovationDocument !== "") {
+    <embed [src]="renovationDocument | safe:'resourceUrl'" type="application/pdf">
+} @else {
+    <p>renovation works!</p>
+}
+    

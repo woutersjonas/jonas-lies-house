@@ -12,6 +12,7 @@ import { RenovationsComponent } from './components/renovations/renovations.compo
 import { WIPComponent } from './components/wip/wip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TitleComponent } from './components/title/title.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TitleComponent } from './components/title/title.component';
     WIPComponent,
     NavbarComponent,
     TitleComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
