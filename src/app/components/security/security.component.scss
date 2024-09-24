@@ -1,0 +1,62 @@
+.button {
+    position: fixed;
+    width: 75px;
+    max-width: 25vw;
+    height: 75px;
+    max-height: 25vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: transparent;
+    cursor: wait;
+    &.a{
+        top: 0;
+        left: 0;
+    }
+    &.b{
+        top: 0;
+        right: 0;
+    }
+    &.c{
+        bottom: 0;
+        left: 0;
+    }
+    &.d{
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.askPassword{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

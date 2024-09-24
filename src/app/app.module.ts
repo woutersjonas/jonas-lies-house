@@ -13,6 +13,8 @@ import { WIPComponent } from './components/wip/wip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TitleComponent } from './components/title/title.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { SecurityComponent } from './components/security/security.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { SafePipe } from './pipes/safe.pipe';
     NavbarComponent,
     TitleComponent,
     SafePipe,
+    SecurityComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
