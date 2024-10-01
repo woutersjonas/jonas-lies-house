@@ -19,6 +19,7 @@ import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { LeningenEnVerzekeringenComponent } from './components/more-info/leningen-en-verzekeringen/leningen-en-verzekeringen.component';
 import { DescriptionComponent } from './components/more-info/description/description.component';
 import { DocumentenMakelaarComponent } from './components/more-info/documenten-makelaar/documenten-makelaar.component';
+import { PlannenComponent } from './components/more-info/plannen/plannen.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { DocumentenMakelaarComponent } from './components/more-info/documenten-m
     LeningenEnVerzekeringenComponent,
     DescriptionComponent,
     DocumentenMakelaarComponent,
+    PlannenComponent,
   ],
   imports: [
     BrowserModule,
