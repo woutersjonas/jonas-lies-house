@@ -26,6 +26,7 @@ export class SecurityService {
 
   clickSecurityButton(number: number) {
     if(number === this.currentNumber + 1) this.currentNumber = number;
+    else if(number === this.currentNumber) return;
     else this.reset();
 
     if(this.currentNumber === 4) this.askPassword = true;
