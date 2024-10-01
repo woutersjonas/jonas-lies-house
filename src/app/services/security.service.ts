@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SecurityService {
   password: string = "wachtwoord";
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   currentNumber: number = 0;
   askPassword: boolean = false;
 

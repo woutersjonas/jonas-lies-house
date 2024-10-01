@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RoutingService {
-  routing: "slider" | "movie" | "renovations" = "slider";
+  routing: "slider" | "movie" | "more_info" = "slider";
   constructor() { }
 
-  setRouting (routing: "slider" | "movie" | "renovations") {
+  setRouting (routing: "slider" | "movie" | "more_info") {
     this.routing = routing;
   }
 }
