@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { RoutingService } from './routing.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class SecurityService {
   currentNumber: number = 0;
   askPassword: boolean = false;
 
-  constructor() { }
+  constructor(private readonly routingService: RoutingService) { }
 
   toggleOpen(password?: string) {
     if(this.isOpen) this.reset();
@@ -20,6 +21,7 @@ export class SecurityService {
     this.isOpen = false;
     this.currentNumber = 0;
     this.askPassword = false;
+    if(this.routingService.routing === "more_info") this.routingService.routing = "slider";
   }
 
   clickSecurityButton(number: number) {

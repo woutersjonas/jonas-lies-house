@@ -6,17 +6,18 @@
             <div class="slide" [ngClass]="{'show': $index === imageService.currentImage}"><img [src]="image.link" [alt]="image.shortDescription"/></div>
         }
     </div>
-    @for(image of imageService.images; track $index) {
-        @if ($index === imageService.currentImage) {
-            <div class="text">{{image.shortDescription}}</div>
-            @if (image.description.length > 0) {
-                <div class="description">
-                    @for (item of image.description; track $index) {
-                        <div>{{item}}</div>
-                    }
-                </div>
+    @if (securityService.isOpen) {
+        @for(image of imageService.images; track $index) {
+            @if ($index === imageService.currentImage) {
+                <div class="text">{{image.shortDescription}}</div>
+                @if (image.description.length > 0) {
+                    <div class="description">
+                        @for (item of image.description; track $index) {
+                            <div>{{item}}</div>
+                        }
+                    </div>
+                }
             }
         }
-
     }
 }
