@@ -50,8 +50,6 @@
     z-index: 999;
     .fullscreenSlider{
         height: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
         img{
             display: none;
             width: 100%;
@@ -63,7 +61,7 @@
         }
         
         .slider-navigation{
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: transparent;
         }
     }
     .close{
