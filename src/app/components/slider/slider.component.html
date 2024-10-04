@@ -6,6 +6,7 @@
             <div class="slide" [ngClass]="{'show': $index === imageService.currentImage}"><img [src]="image.link" [alt]="image.shortDescription"/></div>
         }
     </div>
+    <button (click)="fullscreenService.isFullscreen = true" class="btn btn-primary btn-block w-100"><i class="fa-solid fa-expand"></i></button>
     @if (securityService.isOpen) {
         @for(image of imageService.images; track $index) {
             @if ($index === imageService.currentImage) {
@@ -20,4 +21,18 @@
             }
         }
     }
+}
+@if (fullscreenService.isFullscreen) {
+    <div class="fullscreen">
+        @if(imageService.images) {
+            <div class="slider fullscreenSlider">
+                <button class="slider-navigation next" (click)="imageService.nextImage()"><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="slider-navigation prev" (click)="imageService.prevImage()"><i class="fa-solid fa-arrow-left"></i></button>
+                @for(image of imageService.images; track $index) {
+                    <img [src]="image.link" [alt]="image.shortDescription" [ngClass]="{'show': $index === imageService.currentImage}"/>
+                }
+            </div>
+        }
+        <button class="close" (click)="fullscreenService.isFullscreen = false"><i class="fa-solid fa-compress"></i></button>
+    </div>
 }
