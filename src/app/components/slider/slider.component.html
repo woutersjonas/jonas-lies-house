@@ -6,7 +6,7 @@
             <div class="slide" [ngClass]="{'show': $index === imageService.currentImage}"><img [src]="image.link" [alt]="image.shortDescription"/></div>
         }
     </div>
-    <button (click)="fullscreenService.isFullscreen = true" class="btn btn-primary btn-block w-100"><i class="fa-solid fa-expand"></i></button>
+    <button (click)="fullscreenService.toggleFullscreen()" class="btn btn-primary btn-block w-100"><i class="fa-solid fa-expand"></i></button>
     @if (securityService.isOpen) {
         @for(image of imageService.images; track $index) {
             @if ($index === imageService.currentImage) {
@@ -33,6 +33,6 @@
                 }
             </div>
         }
-        <button class="close" (click)="fullscreenService.isFullscreen = false"><i class="fa-solid fa-compress"></i></button>
+        <button class="close" (click)="fullscreenService.toggleFullscreen()"><i class="fa-solid fa-compress"></i></button>
     </div>
 }
