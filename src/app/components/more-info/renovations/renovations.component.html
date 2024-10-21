@@ -1,47 +1,29 @@
 <h1>Renovaties</h1>
-<div class="row">
-    <div class="col-12">
-        <h2>Badkamer</h2>
-    </div>
-    <div class="col-12 col-md-6 col-lg-12">
-        <app-document renovationDocument="assets/documenten/renovatie/renovatie_badkamer.pdf"/>
-    </div>
-    @if (!showBathroomQuote) {
+@for (documents of documentsService.documentsRenovations; track $index) {
+    <div class="row">
         <div class="col-12">
-            <button (click)="setBathroomQuote(true)" class="btn btn-primary btn-block w-100">Open offertes</button>
+            <h2>{{documents.title}}</h2>
         </div>
-    }
-    <div class="col-12 col-md-6 col-lg-12" [ngClass]="{'d-none': !showBathroomQuote}">
-        <app-document renovationDocument="assets/documenten/renovatie/renovatie_badkamer_offerte_STG.pdf"/>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <h2>Elektriciteit</h2>
-    </div>
-    <div class="col-12 col-md-12 col-lg-12">
-        <app-document renovationDocument="assets/documenten/renovatie/renovatie_elektriciteit.pdf"/>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <h2>Ramen tuinhuis</h2>
-    </div>
-    <div class="col-12">
-        <app-document renovationDocument="assets/documenten/renovatie/bouw_ramen_tuinhuis.pdf"/>
-    </div>
-    @if (!showWindowsQuote) {
         <div class="col-12">
-            <button (click)="setWindowQuote(true)" class="btn btn-primary btn-block w-100">Open offertes</button>
+            <app-document [renovationDocument]="documents.information.filename"/>
         </div>
-    }
-    <div class="col-12 col-sm-4 col-lg-12" [ngClass]="{'d-none': !showWindowsQuote}">
-        <app-document renovationDocument="assets/documenten/renovatie/bouw_ramen_tuinhuis_offerte_raamSelect.pdf"/>
+        @if (documents.quotes.length > 0) {
+            <div class="col-12 mb-2 mt-2">
+                <button (click)="documents.showQuotes = !documents.showQuotes" class="btn btn-primary btn-block w-100">
+                    @if (documents.showQuotes) {
+                        Sluit offertes
+                    } @else {
+                        Open offertes
+                    }
+                </button>
+            </div>
+            @if (documents.showQuotes) {
+                @for (quote of documents.quotes; track $index) {
+                    <div class="col-12 col-md-6 col-lg-12">
+                        <app-document [renovationDocument]="quote.filename"/>
+                    </div>
+                }
+            }
+        }
     </div>
-    <div class="col-12 col-sm-4 col-lg-12" [ngClass]="{'d-none': !showWindowsQuote}">
-        <app-document renovationDocument="assets/documenten/renovatie/bouw_ramen_tuinhuis_offerte_stebo(winsol).pdf"/>
-    </div>
-    <div class="col-12 col-sm-4 col-lg-12" [ngClass]="{'d-none': !showWindowsQuote}">
-        <app-document renovationDocument="assets/documenten/renovatie/bouw_auto_garagepoorten_offerte_stebo(winsol).pdf"/>
-    </div>
-</div>
+}

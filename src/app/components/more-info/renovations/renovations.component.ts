@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DocumentsService } from '../../../services/documents.service';
 
 @Component({
   selector: 'app-renovations',
@@ -9,7 +10,7 @@ export class RenovationsComponent {
   showBathroomQuote: boolean = false;
   showWindowsQuote: boolean = false;
 
-  constructor() { }
+  constructor(public readonly documentsService: DocumentsService) { }
 
   setBathroomQuote(value: boolean) {
     this.reset();
