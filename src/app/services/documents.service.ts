@@ -13,6 +13,7 @@ export class DocumentsService {
         information: { filename: "assets/documenten/renovatie/renovatie_badkamer.pdf" },
         showQuotes: false,
         quotes: [
+          { filename: "assets/documenten/renovatie/renovatie_badkamer_prijzen_desco.pdf" },
           { filename: "assets/documenten/renovatie/renovatie_badkamer_offerte_STG.pdf" },
           { filename: "assets/documenten/renovatie/renovatie_badkamer_offerte_Vancalsteren.pdf" }
         ]
