@@ -15,7 +15,7 @@ describe('SafePipe', () => {
     pipe = new SafePipe(sanitizer);
   });
 
-  it('should be created', () => {
+  it('create an instance', () => {
     expect(pipe).toBeTruthy();
   });
 });
