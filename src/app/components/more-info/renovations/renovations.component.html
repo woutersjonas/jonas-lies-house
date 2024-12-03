@@ -7,6 +7,24 @@
         <div class="col-12">
             <app-document [renovationDocument]="documents.information.filename"/>
         </div>
+        @if (documents.extraInformation.length > 0) {
+            <div class="col-12 mb-2 mt-2">
+                <button (click)="documents.showExtraInformation = !documents.showExtraInformation" class="btn btn-primary btn-block w-100">
+                    @if (documents.showExtraInformation) {
+                        Sluit extra informatie
+                    } @else {
+                        Open extra informatie
+                    }
+                </button>
+            </div>
+            @if (documents.showExtraInformation) {
+                @for (extraInformation of documents.extraInformation; track $index) {
+                    <div class="col-12 col-md-6 col-lg-12">
+                        <app-document [renovationDocument]="extraInformation.filename"/>
+                    </div>
+                }
+            }
+        }
         @if (documents.quotes.length > 0) {
             <div class="col-12 mb-2 mt-2">
                 <button (click)="documents.showQuotes = !documents.showQuotes" class="btn btn-primary btn-block w-100">

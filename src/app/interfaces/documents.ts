@@ -1,7 +1,9 @@
 export interface Documents {
     title: string;
-    showQuotes: boolean;
     information: Information;
+    showExtraInformation: boolean;
+    extraInformation: ExtraInformation[];
+    showQuotes: boolean;
     quotes: Quote[];
 }
 
@@ -10,5 +12,9 @@ interface Quote {
 }
 
 interface Information {
+    filename: string;
+}
+
+interface ExtraInformation {
     filename: string;
 }

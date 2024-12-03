@@ -6,7 +6,7 @@ import { RoutingService } from './routing.service';
 })
 export class SecurityService {
   password: string = "wachtwoord";
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   currentNumber: number = 0;
   askPassword: boolean = false;
 
