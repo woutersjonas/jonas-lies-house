@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'shortdate'
+  name: 'shortdate',
+  standalone: true
 })
 export class ShortdatePipe implements PipeTransform {
 

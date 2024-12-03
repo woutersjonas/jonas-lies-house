@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { DocumentsService } from '../../../services/documents.service';
+import { DocumentComponent } from "../../document/document.component";
 
 @Component({
   selector: 'app-renovations',
+  standalone: true,
+  imports: [DocumentComponent],
   templateUrl: './renovations.component.html',
   styleUrl: './renovations.component.scss'
 })

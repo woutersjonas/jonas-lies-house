@@ -13,13 +13,13 @@ export class DocumentsService {
         information: { filename: "assets/documenten/renovatie/badkamer/renovatie_badkamer.pdf" },
         showExtraInformation: false,
         extraInformation: [
-          { filename: "assets/documenten/renovatie/badkamer/plannen_badkamer.pdf" },
-          { filename: "assets/documenten/renovatie/badkamer/renovatie_badkamer_prijzen_desco.pdf" },
+          { filename: "assets/documenten/renovatie/badkamer/extra_information/plannen_badkamer.pdf" },
+          { filename: "assets/documenten/renovatie/badkamer/extra_information/renovatie_badkamer_prijzen_desco.pdf" },
 
         ],
         showQuotes: false,
         quotes: [
-          { filename: "assets/documenten/renovatie/badkamer/offertes/tegels_offerte_den_dan.pdf" },
+          { filename: "assets/documenten/renovatie/badkamer/offertes/tegels_offerte_den_dam.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/tegels_offerte_gilbo.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/meubels_offerte_desco.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/meubels_offerte_stg_met_fouten.pdf" },
@@ -36,7 +36,7 @@ export class DocumentsService {
       },
       {
         title: "Ramen tuinhuis + poorten",
-        information: { filename: "assets/documenten/renovatie/bouw_ramen_tuinhuis.pdf" },
+        information: { filename: "assets/documenten/renovatie/ramen_tuinhuis/bouw_ramen_tuinhuis.pdf" },
         showExtraInformation: false,
         extraInformation: [],
         showQuotes: false,

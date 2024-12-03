@@ -3,6 +3,8 @@ import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-movie',
+  standalone: true,
+  imports: [],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.scss'
 })

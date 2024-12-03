@@ -8,8 +8,8 @@ describe('WIPComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WIPComponent]
-    })
+    imports: [WIPComponent]
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(WIPComponent);

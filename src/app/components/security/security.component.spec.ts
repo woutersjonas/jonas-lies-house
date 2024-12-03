@@ -8,8 +8,8 @@ describe('SecurityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SecurityComponent]
-    })
+    imports: [SecurityComponent]
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(SecurityComponent);

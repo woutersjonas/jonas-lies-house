@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { SecurityService } from '../../services/security.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-security',
+  standalone: true,
+  imports: [ReactiveFormsModule],
   templateUrl: './security.component.html',
   styleUrl: './security.component.scss'
 })

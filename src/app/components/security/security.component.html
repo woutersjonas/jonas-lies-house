@@ -7,12 +7,11 @@
     <div class="askPassword">
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
             <input id="password" formControlName="password" placeholder="Password" />
-            <div *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
-                Password is required
-            </div>
-            
+            @if (myForm.get('password')?.invalid && myForm.get('password')?.touched) {
+                <div>Password is required</div>
+            }
             <button type="submit" [disabled]="myForm.invalid">Submit</button>
-        </form>
+        </form> 
     </div>
 } @else if (securityService.isOpen) {
     <div class="open">
