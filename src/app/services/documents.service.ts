@@ -22,7 +22,7 @@ export class DocumentsService {
           { filename: "assets/documenten/renovatie/badkamer/offertes/tegels_offerte_den_dam.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/tegels_offerte_gilbo.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/meubels_offerte_desco.pdf" },
-          { filename: "assets/documenten/renovatie/badkamer/offertes/meubels_offerte_stg_met_fouten.pdf" },
+          { filename: "assets/documenten/renovatie/badkamer/offertes/meubels_offerte_stg.pdf" },
           { filename: "assets/documenten/renovatie/badkamer/offertes/renovatie_badkamer_offerte_Vancalsteren.pdf" }
         ]
       },
